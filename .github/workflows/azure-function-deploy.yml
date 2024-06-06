@@ -27,6 +27,11 @@ jobs:
       - name: Copy .env to function app
         run: cp .env function_app/
 
+      - name: List installed packages
+        run: |
+          ls -R function_app/.python_packages/lib/site-packages
+          python -c "import sys; print(sys.path)"
+
       - name: Archive function app
         run: zip -r functionapp.zip function_app
 
