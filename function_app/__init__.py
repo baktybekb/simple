@@ -2,6 +2,7 @@ import os
 import logging
 import datetime
 
+from pydantic import BaseModel
 import azure.functions as func
 from dotenv import load_dotenv
 
